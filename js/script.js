@@ -33,16 +33,13 @@ $(document).ready(function() {
 
     $("[data-fancybox]").fancybox();
     
-    $("#navigation li a").click(function(e) {
-        e.preventDefault();
+    $("#navigation li a, .titleMessage a").click(function(e) {
+      e.preventDefault();
 
-        let targetElement = $(this).attr("href");
-        let targetPosition = $(targetElement).offset().top;
-        $("html, body").animate({ scrollTop: targetPosition - 50}, "slow");
+      let targetElement = $(this).attr("href");
+      let targetPosition = $(targetElement).offset().top;
+      $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
     });
-
-
-
 
     const nav = $("#navigation");
     const navTop = nav.offset().top;
